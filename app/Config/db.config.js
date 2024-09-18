@@ -21,8 +21,8 @@ const sequelize = new Sequelize(env.database, env.username, env.password, {
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.Prestamo = require('../Models/autor.model.js')(sequelize, Sequelize);
-db.Prestamo = require('../Models/libro.model.js')(sequelize, Sequelize);
-db.Prestamo = require('../Models/usuario.model.js')(sequelize, Sequelize);
+db.Autor = require('../Models/autor.model.js')(sequelize, Sequelize);
+db.Libro = require('../Models/libro.model.js')(sequelize, Sequelize);
+db.Usuario = require('../Models/usuario.model.js')(sequelize, Sequelize);
 
 module.exports = db;
