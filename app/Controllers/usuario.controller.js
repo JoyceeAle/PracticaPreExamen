@@ -88,7 +88,7 @@ try {
       fechaRegistro: req.body.numPaginas,
       estado: req.body.anioEdicion,
     };
-    let result = await Usuario.update(updatedObject, { returning: true, where: { id: usuarioId } });
+    let result = await Usuario.update(updatedObject, { returning: true, where: { idUsuario: usuarioId } });
 
     if (!result) {
       res.status(500).json({

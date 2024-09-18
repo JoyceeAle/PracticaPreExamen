@@ -90,7 +90,7 @@ try {
       cantidadDisponible: req.body.cantidadDisponible,
       ubicacion: req.body.ubicacion
     };
-    let result = await Libro.update(updatedObject, { returning: true, where: { id: libroId } });
+    let result = await Libro.update(updatedObject, { returning: true, where: { idLibro: libroId } });
 
     if (!result) {
       res.status(500).json({
