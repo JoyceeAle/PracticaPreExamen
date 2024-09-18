@@ -82,7 +82,7 @@ try {
       nacionalidad: req.body.nacionalidad,
       fechaNacimiento: req.body.fechaNacimiento,
     };
-    let result = await Autor.update(updatedObject, { returning: true, where: { id: autorId } });
+    let result = await Autor.update(updatedObject, { returning: true, where: { idAutor: autorId } });
 
     if (!result) {
       res.status(500).json({
